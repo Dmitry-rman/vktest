@@ -1,0 +1,22 @@
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/AFNetworking.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/DACircularProgress.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/LGRefreshView.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/Pods-VKTest.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/VK-ios-sdk-VKSdkResources.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/VK-ios-sdk.xcscheme
+Pods/Target Support Files/AFNetworking/AFNetworking-umbrella.h
+Pods/Target Support Files/AFNetworking/AFNetworking.modulemap
+Pods/Target Support Files/AFNetworking/Info.plist
+Pods/Target Support Files/DACircularProgress/DACircularProgress-umbrella.h
+Pods/Target Support Files/DACircularProgress/DACircularProgress.modulemap
+Pods/Target Support Files/DACircularProgress/Info.plist
+Pods/Target Support Files/LGRefreshView/Info.plist
+Pods/Target Support Files/LGRefreshView/LGRefreshView-umbrella.h
+Pods/Target Support Files/LGRefreshView/LGRefreshView.modulemap
+Pods/Target Support Files/Pods-VKTest/Info.plist
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest-umbrella.h
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest.modulemap
+Pods/Target Support Files/VK-ios-sdk/Info.plist
+Pods/Target Support Files/VK-ios-sdk/VK-ios-sdk-umbrella.h
+Pods/Target Support Files/VK-ios-sdk/VK-ios-sdk.modulemap

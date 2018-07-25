@@ -1,8 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/DACircularProgress" "${PODS_CONFIGURATION_BUILD_DIR}/LGRefreshView" "${PODS_CONFIGURATION_BUILD_DIR}/VK-ios-sdk"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/DACircularProgress" "${PODS_ROOT}/Headers/Public/LGRefreshView" "${PODS_ROOT}/Headers/Public/VK-ios-sdk"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/DACircularProgress" "${PODS_CONFIGURATION_BUILD_DIR}/LGRefreshView" "${PODS_CONFIGURATION_BUILD_DIR}/VK-ios-sdk"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/DACircularProgress" -isystem "${PODS_ROOT}/Headers/Public/LGRefreshView" -isystem "${PODS_ROOT}/Headers/Public/VK-ios-sdk"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"DACircularProgress" -l"LGRefreshView" -l"VK-ios-sdk" -framework "CoreGraphics" -framework "Foundation" -framework "MobileCoreServices" -framework "QuartzCore" -framework "SafariServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DACircularProgress/DACircularProgress.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LGRefreshView/LGRefreshView.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/VK-ios-sdk/VK_ios_sdk.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "AFNetworking" -framework "DACircularProgress" -framework "LGRefreshView" -framework "VK_ios_sdk"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
