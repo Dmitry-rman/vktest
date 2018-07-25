@@ -43,6 +43,18 @@
 		0A1D98FD20FB4242008FCC86 /* VKFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98FB20FB4242008FCC86 /* VKFriendTableViewCell.m */; };
 		0A1D990420FCF751008FCC86 /* VKStatsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D990320FCF751008FCC86 /* VKStatsCollectionViewCell.m */; };
 		0A1D990520FCF751008FCC86 /* VKStatsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D990320FCF751008FCC86 /* VKStatsCollectionViewCell.m */; };
+		0AC3848F2108CECB009C1F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3848E2108CECB009C1F83 /* AppDelegate.swift */; };
+		0AC384962108CECD009C1F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC384952108CECD009C1F83 /* Assets.xcassets */; };
+		0AC3849E2108CF68009C1F83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1D98D220F8AB6A008FCC86 /* Main.storyboard */; };
+		0AC3849F2108CF79009C1F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1D98CF20F8AB6A008FCC86 /* LaunchScreen.storyboard */; };
+		0AC384A02108CFC6009C1F83 /* VKDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */; };
+		0AC384A12108CFC6009C1F83 /* VKFriendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98EA20FB0660008FCC86 /* VKFriendData.m */; };
+		0AC384A42108D13A009C1F83 /* VKDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A32108D13A009C1F83 /* VKDataProvider.swift */; };
+		0AC384A52108D13A009C1F83 /* VKDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A32108D13A009C1F83 /* VKDataProvider.swift */; };
+		0AC384A72108D308009C1F83 /* FriendProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */; };
+		0AC384A82108D308009C1F83 /* FriendProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */; };
+		0AC384AA2108D344009C1F83 /* VKFriendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A92108D344009C1F83 /* VKFriendData.swift */; };
+		0AC384AB2108D344009C1F83 /* VKFriendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A92108D344009C1F83 /* VKFriendData.swift */; };
 		0ACB8AF820FD09C000352970 /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB8AF520FD09C000352970 /* UIImage+resize.m */; };
 		0ACB8AF920FD09C000352970 /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB8AF520FD09C000352970 /* UIImage+resize.m */; };
 		0ACB8AFA20FD09C000352970 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB8AF620FD09C000352970 /* NSDate+Helper.m */; };
@@ -52,7 +64,7 @@
 		0AD1C11820F88D2100577883 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C11720F88D2100577883 /* main.m */; };
 		0AD1C12220F88D2100577883 /* VKTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C12120F88D2100577883 /* VKTestTests.m */; };
 		0AD1C12D20F88D2100577883 /* VKTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C12C20F88D2100577883 /* VKTestUITests.m */; };
-		7F5D85513C0EEC96E10D56C9 /* libPods-VKTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E383988C0CB222A6195CA4A0 /* libPods-VKTest.a */; };
+		C75CC8C19A9F759AAAE5F555 /* Pods_VKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A971B2B61CB00FBDFF619A /* Pods_VKTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +120,14 @@
 		0A1D98FB20FB4242008FCC86 /* VKFriendTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKFriendTableViewCell.m; sourceTree = "<group>"; };
 		0A1D990220FCF751008FCC86 /* VKStatsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKStatsCollectionViewCell.h; sourceTree = "<group>"; };
 		0A1D990320FCF751008FCC86 /* VKStatsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKStatsCollectionViewCell.m; sourceTree = "<group>"; };
+		0AC3848C2108CECB009C1F83 /* VKTest_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTest_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC3848E2108CECB009C1F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AC384952108CECD009C1F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AC3849A2108CECD009C1F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC384A22108D13A009C1F83 /* VKTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AC384A32108D13A009C1F83 /* VKDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDataProvider.swift; sourceTree = "<group>"; };
+		0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProviderProtocol.swift; sourceTree = "<group>"; };
+		0AC384A92108D344009C1F83 /* VKFriendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendData.swift; sourceTree = "<group>"; };
 		0ACB8AF420FD09C000352970 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		0ACB8AF520FD09C000352970 /* UIImage+resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resize.m"; sourceTree = "<group>"; };
 		0ACB8AF620FD09C000352970 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
@@ -126,15 +146,22 @@
 		0AD1C12E20F88D2100577883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95BE83BD2CDA48E3BFA9AA61 /* Pods-VKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKTest/Pods-VKTest.debug.xcconfig"; sourceTree = "<group>"; };
 		AD6648F90573D5C51DAFBB4E /* Pods-VKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKTest/Pods-VKTest.release.xcconfig"; sourceTree = "<group>"; };
-		E383988C0CB222A6195CA4A0 /* libPods-VKTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A971B2B61CB00FBDFF619A /* Pods_VKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0AC384892108CECB009C1F83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AD1C10220F88D1F00577883 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5D85513C0EEC96E10D56C9 /* libPods-VKTest.a in Frameworks */,
+				C75CC8C19A9F759AAAE5F555 /* Pods_VKTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +247,10 @@
 			children = (
 				0A1D98E520FA68DA008FCC86 /* VKDataProvider.h */,
 				0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */,
+				0AC384A32108D13A009C1F83 /* VKDataProvider.swift */,
+				0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */,
 				0A1D98ED20FB0762008FCC86 /* FriendProviderProtocol.h */,
+				0AC384A92108D344009C1F83 /* VKFriendData.swift */,
 				0A1D98E920FB065F008FCC86 /* VKFriendData.h */,
 				0A1D98EA20FB0660008FCC86 /* VKFriendData.m */,
 			);
@@ -238,6 +268,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		0AC3848D2108CECB009C1F83 /* VKTest_swift */ = {
+			isa = PBXGroup;
+			children = (
+				0AC3848E2108CECB009C1F83 /* AppDelegate.swift */,
+				0AC384952108CECD009C1F83 /* Assets.xcassets */,
+				0AC3849A2108CECD009C1F83 /* Info.plist */,
+			);
+			path = VKTest_swift;
+			sourceTree = "<group>";
+		};
 		0AD1C0FC20F88D1F00577883 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +285,7 @@
 				0AD1C10720F88D1F00577883 /* VKTest */,
 				0AD1C12020F88D2100577883 /* VKTestTests */,
 				0AD1C12B20F88D2100577883 /* VKTestUITests */,
+				0AC3848D2108CECB009C1F83 /* VKTest_swift */,
 				0AD1C10620F88D1F00577883 /* Products */,
 				FBB3AE6EF4066DC60E8F3E21 /* Pods */,
 				CF3FE35FD9AB7BDED3B8EF4B /* Frameworks */,
@@ -257,6 +298,7 @@
 				0AD1C10520F88D1F00577883 /* VKTest.app */,
 				0AD1C11D20F88D2100577883 /* VKTestTests.xctest */,
 				0AD1C12820F88D2100577883 /* VKTestUITests.xctest */,
+				0AC3848C2108CECB009C1F83 /* VKTest_swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,6 +312,7 @@
 				0AD1C10820F88D1F00577883 /* AppDelegate.h */,
 				0AD1C10920F88D1F00577883 /* AppDelegate.m */,
 				0AD1C11120F88D2100577883 /* Assets.xcassets */,
+				0AC384A22108D13A009C1F83 /* VKTest-Bridging-Header.h */,
 				0AD1C11620F88D2100577883 /* Info.plist */,
 				0AD1C11720F88D2100577883 /* main.m */,
 			);
@@ -297,7 +340,7 @@
 		CF3FE35FD9AB7BDED3B8EF4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E383988C0CB222A6195CA4A0 /* libPods-VKTest.a */,
+				E8A971B2B61CB00FBDFF619A /* Pods_VKTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -314,6 +357,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0AC3848B2108CECB009C1F83 /* VKTest_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC3849D2108CECD009C1F83 /* Build configuration list for PBXNativeTarget "VKTest_swift" */;
+			buildPhases = (
+				0AC384882108CECB009C1F83 /* Sources */,
+				0AC384892108CECB009C1F83 /* Frameworks */,
+				0AC3848A2108CECB009C1F83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKTest_swift;
+			productName = VKTest_swift;
+			productReference = 0AC3848C2108CECB009C1F83 /* VKTest_swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0AD1C10420F88D1F00577883 /* VKTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AD1C13120F88D2100577883 /* Build configuration list for PBXNativeTarget "VKTest" */;
@@ -322,7 +382,7 @@
 				0AD1C10120F88D1F00577883 /* Sources */,
 				0AD1C10220F88D1F00577883 /* Frameworks */,
 				0AD1C10320F88D1F00577883 /* Resources */,
-				AB42036A86A4D675069E1265 /* [CP] Copy Pods Resources */,
+				83279DB437315D51D4BE9BD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,11 +435,16 @@
 		0AD1C0FD20F88D1F00577883 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = RMan;
 				TargetAttributes = {
+					0AC3848B2108CECB009C1F83 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					0AD1C10420F88D1F00577883 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					0AD1C11C20F88D2100577883 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -407,11 +472,22 @@
 				0AD1C10420F88D1F00577883 /* VKTest */,
 				0AD1C11C20F88D2100577883 /* VKTestTests */,
 				0AD1C12720F88D2100577883 /* VKTestUITests */,
+				0AC3848B2108CECB009C1F83 /* VKTest_swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0AC3848A2108CECB009C1F83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC3849F2108CF79009C1F83 /* LaunchScreen.storyboard in Resources */,
+				0AC384962108CECD009C1F83 /* Assets.xcassets in Resources */,
+				0AC3849E2108CF68009C1F83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AD1C10320F88D1F00577883 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,22 +517,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AB42036A86A4D675069E1265 /* [CP] Copy Pods Resources */ = {
+		83279DB437315D51D4BE9BD5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VKTest/Pods-VKTest-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/VK-ios-sdk/VKSdkResources.bundle",
+				"${SRCROOT}/Pods/Target Support Files/Pods-VKTest/Pods-VKTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/LGRefreshView/LGRefreshView.framework",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VKSdkResources.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGRefreshView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKTest/Pods-VKTest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKTest/Pods-VKTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2550B76AB350EE63D09BF81 /* [CP] Check Pods Manifest.lock */ = {
@@ -480,11 +562,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0AC384882108CECB009C1F83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC384AB2108D344009C1F83 /* VKFriendData.swift in Sources */,
+				0AC384A12108CFC6009C1F83 /* VKFriendData.m in Sources */,
+				0AC384A52108D13A009C1F83 /* VKDataProvider.swift in Sources */,
+				0AC3848F2108CECB009C1F83 /* AppDelegate.swift in Sources */,
+				0AC384A02108CFC6009C1F83 /* VKDataProvider.m in Sources */,
+				0AC384A82108D308009C1F83 /* FriendProviderProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AD1C10120F88D1F00577883 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0A1D98B820F8A2B8008FCC86 /* JMSTableViewSection.m in Sources */,
+				0AC384A72108D308009C1F83 /* FriendProviderProtocol.swift in Sources */,
 				0A1D98C020F8A4F3008FCC86 /* JMSTableViewCell.m in Sources */,
 				0A1D98DD20F8AB6A008FCC86 /* VKTestProfileCell.m in Sources */,
 				0A1D98DB20F8AB6A008FCC86 /* VKFriendViewController.m in Sources */,
@@ -493,7 +589,9 @@
 				0A1D98F020FB22A4008FCC86 /* VkStartViewController.m in Sources */,
 				0A1D98EB20FB0660008FCC86 /* VKFriendData.m in Sources */,
 				0AD1C11820F88D2100577883 /* main.m in Sources */,
+				0AC384AA2108D344009C1F83 /* VKFriendData.swift in Sources */,
 				0A1D98C420F8A556008FCC86 /* UILabel+LinesCount.m in Sources */,
+				0AC384A42108D13A009C1F83 /* VKDataProvider.swift in Sources */,
 				0A1D98FC20FB4242008FCC86 /* VKFriendTableViewCell.m in Sources */,
 				0A1D98F420FB2447008FCC86 /* VKBaseViewController.m in Sources */,
 				0A1D98E320F8AB78008FCC86 /* VKTestTableViewController.m in Sources */,
@@ -568,6 +666,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0AC3849B2108CECD009C1F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K42YC37US;
+				INFOPLIST_FILE = VKTest_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rockman.VKTest-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AC3849C2108CECD009C1F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K42YC37US;
+				INFOPLIST_FILE = VKTest_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rockman.VKTest-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		0AD1C12F20F88D2100577883 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -683,6 +821,7 @@
 			baseConfigurationReference = 95BE83BD2CDA48E3BFA9AA61 /* Pods-VKTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
@@ -694,6 +833,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockman.VKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKTest/VKTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -703,6 +845,7 @@
 			baseConfigurationReference = AD6648F90573D5C51DAFBB4E /* Pods-VKTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
@@ -715,6 +858,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKTest/VKTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -722,6 +867,7 @@
 		0AD1C13520F88D2100577883 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
@@ -741,6 +887,7 @@
 		0AD1C13620F88D2100577883 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
@@ -760,6 +907,7 @@
 		0AD1C13820F88D2100577883 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
 				INFOPLIST_FILE = VKTestUITests/Info.plist;
@@ -778,6 +926,7 @@
 		0AD1C13920F88D2100577883 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K42YC37US;
 				INFOPLIST_FILE = VKTestUITests/Info.plist;
@@ -796,6 +945,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0AC3849D2108CECD009C1F83 /* Build configuration list for PBXNativeTarget "VKTest_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC3849B2108CECD009C1F83 /* Debug */,
+				0AC3849C2108CECD009C1F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0AD1C10020F88D1F00577883 /* Build configuration list for PBXProject "VKTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

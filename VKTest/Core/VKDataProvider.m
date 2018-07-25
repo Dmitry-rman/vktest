@@ -6,7 +6,7 @@
 //
 
 #import "VKDataProvider.h"
-#import <VKSdk.h>
+#import "VKSdk.h"
 #import "VKFriendData.h"
 #import "VKUser.h"
 

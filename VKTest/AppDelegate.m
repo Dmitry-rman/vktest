@@ -5,7 +5,7 @@
 //  Created by Dmitry Kudryavtsev
 
 #import "AppDelegate.h"
-#import <VKSdk.h>
+#import "VKSdk.h"
 #import "VKDataProvider.h"
 #import "VKFriendsViewController.h"
 #import "VkStartViewController.h"
