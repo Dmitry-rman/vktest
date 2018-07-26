@@ -8,5 +8,6 @@ target 'VKTest' do
 pod 'AFNetworking'
 pod 'LGRefreshView'
 pod 'VK-ios-sdk'
+pod 'MBProgressHUD'
 
 end

@@ -249,8 +249,8 @@
 				0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */,
 				0AC384A32108D13A009C1F83 /* VKDataProvider.swift */,
 				0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */,
-				0A1D98ED20FB0762008FCC86 /* FriendProviderProtocol.h */,
 				0AC384A92108D344009C1F83 /* VKFriendData.swift */,
+				0A1D98ED20FB0762008FCC86 /* FriendProviderProtocol.h */,
 				0A1D98E920FB065F008FCC86 /* VKFriendData.h */,
 				0A1D98EA20FB0660008FCC86 /* VKFriendData.m */,
 			);
@@ -527,6 +527,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/LGRefreshView/LGRefreshView.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -534,6 +535,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGRefreshView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

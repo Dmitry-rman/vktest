@@ -17,11 +17,13 @@ PODS:
   - DACircularProgress (2.3.1)
   - LGRefreshView (1.0.5):
     - DACircularProgress (~> 2.3.0)
+  - MBProgressHUD (1.0.0)
   - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
   - AFNetworking
   - LGRefreshView
+  - MBProgressHUD
   - VK-ios-sdk
 
 SPEC REPOS:
@@ -29,14 +31,16 @@ SPEC REPOS:
     - AFNetworking
     - DACircularProgress
     - LGRefreshView
+    - MBProgressHUD
     - VK-ios-sdk
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   LGRefreshView: 34746afadbd23de8d1449cab15f3d89269645d43
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: 44f50d74d4bf65ce090933e5669c2fe1e18a1a6f
+PODFILE CHECKSUM: 95642663c32d771139a6488331a16cef669bfbdf
 
 COCOAPODS: 1.5.3

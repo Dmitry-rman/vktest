@@ -20,3 +20,20 @@ Pods/Target Support Files/Pods-VKTest/Pods-VKTest.modulemap
 Pods/Target Support Files/VK-ios-sdk/Info.plist
 Pods/Target Support Files/VK-ios-sdk/VK-ios-sdk-umbrella.h
 Pods/Target Support Files/VK-ios-sdk/VK-ios-sdk.modulemap
+Pods/MBProgressHUD/LICENSE
+Pods/MBProgressHUD/MBProgressHUD.h
+Pods/MBProgressHUD/MBProgressHUD.m
+Pods/MBProgressHUD/README.mdown
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/MBProgressHUD.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/Dmitry.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Target Support Files/MBProgressHUD/Info.plist
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-dummy.m
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD-umbrella.h
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD.modulemap
+Pods/Target Support Files/MBProgressHUD/MBProgressHUD.xcconfig
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest-acknowledgements.markdown
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest-acknowledgements.plist
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest-frameworks.sh
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest.debug.xcconfig
+Pods/Target Support Files/Pods-VKTest/Pods-VKTest.release.xcconfig
