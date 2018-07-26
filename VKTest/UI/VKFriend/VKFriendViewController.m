@@ -12,7 +12,6 @@
 #import "VKDataProvider.h"
 #import "VKFriendData.h"
 
-
 static NSString *const kProfilCellID = @"profileCellID";
 
 typedef NS_ENUM(NSInteger, VKFriendRowIdentifier) {
@@ -66,7 +65,6 @@ typedef NS_ENUM(NSInteger, VKFriendSectionIdentifier) {
                     }];
     _refreshView.tintColor = self.navigationController.navigationBar.barTintColor;
     _refreshView.backgroundColor =  [UIColor clearColor];
-    [_refreshView triggerAnimated: YES];
 }
 
 - (void) reloadData{

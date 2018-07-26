@@ -9,6 +9,8 @@
 #import "LGRefreshView.h"
 #import "VKFriendViewController.h"
 #import "VKFriendTableViewCell.h"
+#import "VKFriendData.h"
+#import "VKDataProvider.h"
 
 static NSString *const kVkFriendInfoSegue = @"vkFriendInfoSegue";
 static NSString *const kVKFriendCellID = @"vkFriendCellID";
@@ -78,10 +80,29 @@ static NSString *const kVKFriendCellID = @"vkFriendCellID";
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    __weak typeof(self) weakSelf = self;
+    VKFriendData *friendInfo = _dataProvider.friends[indexPath.row];
+    [self showBusy];
+    [self.dataProvider getFriendInfoByID: friendInfo.userID
+                      WithCompletion:^(VKFriendData *friendInfo) {
+                          [weakSelf showFriend: friendInfo];
+                          [weakSelf hideBusy];
+                      }
+                                   Error:^(NSError *error) {
+                          [weakSelf showError: error];
+                          [weakSelf hideBusy];
+                      }];
+    
+}
+
+#pragma mark -
+
+- (void) showFriend: (VKFriendData *) friendInfo{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
     VKFriendViewController* controller = [storyboard instantiateViewControllerWithIdentifier: NSStringFromClass([VKFriendViewController class])];
-    controller.dataProvider = _dataProvider;
-    controller.friendInfo = _dataProvider.friends[indexPath.row];
+    controller.dataProvider = self.dataProvider;
+    controller.friendInfo = friendInfo;
     [self.navigationController pushViewController: controller animated: YES];
 }
 
