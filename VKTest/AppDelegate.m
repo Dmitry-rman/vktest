@@ -35,11 +35,13 @@
     }
                                     Fail:^(NSString *failMessage) {
                                         [weakSelf showMessage: failMessage
-                                                    WithTitle: NSLocalizedString(@"Error on VK authorization. Please, try again.", nil)];
-                                        UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
-                                        VkStartViewController *controller =  (VkStartViewController*)[storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([VkStartViewController class])];
-                                        controller.dataProvider = weakSelf.dataProvider;
-                                        navController.viewControllers = @[controller];
+                                                    WithTitle: NSLocalizedString(@"Error on VK authorization. Please, try again.", nil)
+                                                AndCompletion:^{
+                                                      UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
+                                                      VkStartViewController *controller =  (VkStartViewController*)[storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([VkStartViewController class])];
+                                                      controller.dataProvider = weakSelf.dataProvider;
+                                                      navController.viewControllers = @[controller];
+                                                    }];
                                     }];
     return YES;
 }
@@ -82,10 +84,22 @@
             WithTitle:NSLocalizedString(@"Error", nil)];
 }
 
-- (void) showMessage: (NSString*) message WithTitle: (NSString*) tittle{
+- (void) showMessage: (NSString*) message
+           WithTitle: (NSString*) tittle{
+    [self showMessage: message WithTitle: tittle AndCompletion: nil];
+}
+
+- (void) showMessage: (NSString*) message
+           WithTitle: (NSString*) tittle
+       AndCompletion: (void(^)(void)) completion{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: tittle
                                                                              message: message
                                                                       preferredStyle: UIAlertControllerStyleAlert];
+    [alertController addAction: [UIAlertAction actionWithTitle: NSLocalizedString(@"Ок", nil)
+                                                         style: UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           if(completion)completion();
+                                                       }]];
     [self.window.rootViewController presentViewController: alertController
                                                  animated: YES
                                                completion: nil];
