@@ -8,6 +8,8 @@
 
 import Foundation
 
+let kDataProviderChangedFriendsListNotification: String  = "kDataProviderChangedFriendsListNotification"
+
 protocol FriendProviderProtocol {
     func getFriendInfo(id: NSNumber,
                        onSuccess completionBlock : @escaping (VKFriendData?)->(),

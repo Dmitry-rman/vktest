@@ -123,9 +123,10 @@ class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
             for i in 0..<array.count{
                 let vkuser: VKUser = array[i]
                 let infoData = weakself?.friendData(fromUser:  vkuser)
-                self._friends.add(infoData)
+                self._friends.add(infoData as Any)
             }
             
+            NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: kDataProviderChangedFriendsListNotification) , object: nil)
         },
                                                                        errorBlock: { (error: NSError?) in
                                                                         
