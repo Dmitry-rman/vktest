@@ -88,12 +88,10 @@ static NSString *const kVKFriendCellID = @"vkFriendCellID";
                                  onSuccess:^(VKFriendData * _Nullable friendInfo) {
         [weakSelf showFriend: friendInfo];
         [weakSelf hideBusy];
-    } onFail: nil];
-   /*
-                          [weakSelf showError: error];
-                          [weakSelf hideBusy];
-               */
-    
+                                 } onFail:^(NSError * _Nullable error) {
+                                     [weakSelf showError: error];
+                                     [weakSelf hideBusy];
+                                 }];
 }
 
 #pragma mark -

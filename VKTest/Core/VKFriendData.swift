@@ -30,7 +30,7 @@ enum UserSex: Int {
                      userID: String,
                      isOnline: Bool,
                      sex: UserSex,
-                     vizited: NSNumber,
+                     vizited: NSNumber?,
                      info: String,
                      photoURLString: String,
                      counters: NSDictionary,
@@ -40,9 +40,14 @@ enum UserSex: Int {
         self.isOnline = isOnline
         self.infoText = info
         self.isYourFriend = isYourFriend
-        self.photoImageURL = URL.init(fileURLWithPath:  photoURLString)
-        let vizitDate = Date.init(timeIntervalSince1970:  vizited.doubleValue)
-        self.vizitText = NSLocalizedString("заходил", comment: "") + (sex == UserSex.woman ? "а" : "") + ""//vizitDate.string
+        self.photoImageURL = URL.init(string:  photoURLString)!
+        if(vizited != nil){
+            let vizitDate = Date.init(timeIntervalSince1970:  vizited!.doubleValue)
+            self.vizitText = NSLocalizedString("заходил", comment: "") + (sex == UserSex.woman ? "а" : "") + " " + NSDate.string(from: vizitDate)
+        }
+        else{
+            self.vizitText = ""
+        }
         self.statCounters = counters
     }
     

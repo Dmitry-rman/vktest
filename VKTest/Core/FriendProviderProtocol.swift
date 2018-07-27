@@ -12,8 +12,8 @@ let kDataProviderChangedFriendsListNotification: String  = "kDataProviderChanged
 
 @objc public protocol FriendProviderProtocol {
     func getFriendInfo(id: NSNumber,
-                       onSuccess completionBlock : @escaping (VKFriendData?)->(),
-                       onFail failBlock : @escaping (_ error: NSError)->() -> Void)
+                              onSuccess completionBlock : @escaping (VKFriendData?)->(),
+                              onFail failBlock : @escaping (Error?) -> Void) -> Void
     func prepare(completion: @escaping () -> Void, fail: @escaping (_ failMessage: NSString) -> Void)
     var friends: NSArray {get}
     func reloadFriendList() -> Void

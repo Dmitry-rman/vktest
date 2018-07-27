@@ -79,15 +79,12 @@ typedef NS_ENUM(NSInteger, VKFriendSectionIdentifier) {
                                      [weakSelf.refreshView endRefreshing];
                                      [weakSelf.tableView reloadData];
                                  });
-                             } onFail: nil];
-    
-    /*
-     dispatch_async(dispatch_get_main_queue(), ^{
-     [weakSelf.refreshView endRefreshing];
-     [weakSelf showError: error];
-     });
-     */
-
+                             } onFail:^(NSError * _Nullable error) {
+                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                     [weakSelf.refreshView endRefreshing];
+                                     [weakSelf showError: error];
+                                 });
+                             }];
 }
 
 #pragma mark Actions

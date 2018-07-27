@@ -29,29 +29,31 @@ let vkFriendFields: NSString = "id,first_name,last_name,city,country,photo_100,o
     
     func friendData(fromUser vkuser: VKUser) -> VKFriendData{
         var stats: NSMutableDictionary = NSMutableDictionary()
-        if(vkuser.counters.friends != nil){
-            stats.setObject(vkuser.counters.friends.stringValue,
-                            forKey: NSLocalizedString("друзей", comment: "") as NSCopying)
-        }
-        if(vkuser.counters.mutual_friends != nil){
-            stats.setObject(vkuser.counters.mutual_friends.stringValue,
-                            forKey: NSLocalizedString("общих", comment: "") as NSCopying)
-        }
-        if(vkuser.counters.followers != nil){
-            stats.setObject(vkuser.counters.followers.stringValue,
-                            forKey: NSLocalizedString("подписчика", comment: "") as NSCopying)
-        }
-        if(vkuser.counters.user_photos != nil){
-            stats.setObject(vkuser.counters.user_photos.stringValue,
-                            forKey: NSLocalizedString("фото", comment: "") as NSCopying)
-        }
-        if(vkuser.counters.audios != nil){
-            stats.setObject(vkuser.counters.audios.stringValue,
-                            forKey: NSLocalizedString("аудио", comment: "") as NSCopying)
-        }
-        if(vkuser.counters.videos != nil){
-            stats.setObject(vkuser.counters.videos.stringValue,
-                            forKey: NSLocalizedString("видео", comment: "") as NSCopying)
+        if(vkuser.counters != nil){
+            if(vkuser.counters.friends != nil){
+                stats.setObject(vkuser.counters.friends.stringValue,
+                                forKey: NSLocalizedString("друзей", comment: "") as NSCopying)
+            }
+            if(vkuser.counters.mutual_friends != nil){
+                stats.setObject(vkuser.counters.mutual_friends.stringValue,
+                                forKey: NSLocalizedString("общих", comment: "") as NSCopying)
+            }
+            if(vkuser.counters.followers != nil){
+                stats.setObject(vkuser.counters.followers.stringValue,
+                                forKey: NSLocalizedString("подписчика", comment: "") as NSCopying)
+            }
+            if(vkuser.counters.user_photos != nil){
+                stats.setObject(vkuser.counters.user_photos.stringValue,
+                                forKey: NSLocalizedString("фото", comment: "") as NSCopying)
+            }
+            if(vkuser.counters.audios != nil){
+                stats.setObject(vkuser.counters.audios.stringValue,
+                                forKey: NSLocalizedString("аудио", comment: "") as NSCopying)
+            }
+            if(vkuser.counters.videos != nil){
+                stats.setObject(vkuser.counters.videos.stringValue,
+                                forKey: NSLocalizedString("видео", comment: "") as NSCopying)
+            }
         }
         
         
@@ -63,8 +65,8 @@ let vkFriendFields: NSString = "id,first_name,last_name,city,country,photo_100,o
                                          userID: vkuser.id.stringValue,
                                          isOnline: vkuser.online.boolValue,
                                          sex:  UserSex(rawValue: vkuser.sex!.intValue)!,
-                                         vizited: vkuser.last_seen.time,
-                                         info: vkuser.city.title,
+                                         vizited: vkuser.last_seen != nil ? vkuser.last_seen.time : nil,
+                                         info: vkuser.city != nil ? vkuser.city.title : "",
                                          photoURLString: vkuser.photo_100,
                                          counters: stats,
                                          isYourFriend: true)
@@ -74,8 +76,8 @@ let vkFriendFields: NSString = "id,first_name,last_name,city,country,photo_100,o
     //MARK: FriendProviderProtocol
     
     public func getFriendInfo(id: NSNumber,
-                       onSuccess completionBlock : @escaping (VKFriendData?)->(),
-                       onFail failBlock : @escaping (_ error: NSError)->() -> Void){
+                              onSuccess completionBlock : @escaping (VKFriendData?)->(),
+                              onFail failBlock : @escaping (Error?) -> Void) -> Void{
         VKApi.users().get([ VK_API_FIELDS : vkFriendFields,
                             VK_API_USER_IDS: id.stringValue]).execute(resultBlock: { (response: VKResponse?) in
                                 let user: VKUser? = (response?.parsedModel as! VKUsersArray?)!.firstObject()
@@ -84,10 +86,7 @@ let vkFriendFields: NSString = "id,first_name,last_name,city,country,photo_100,o
                                     infoData = self.friendData(fromUser: user!)
                                 }
                                 completionBlock(infoData)
-                            },
-                                                                      errorBlock: { (error: NSError?) in
-                                                                        failBlock(error! as NSError)()
-                                                                        } as! (Error?) -> Void)
+                            }, errorBlock:  failBlock)
     }
     
 
@@ -127,10 +126,9 @@ let vkFriendFields: NSString = "id,first_name,last_name,city,country,photo_100,o
             }
             
             NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: kDataProviderChangedFriendsListNotification) , object: nil)
-        },
-                                                                       errorBlock: { (error: NSError?) in
-                                                                        
-                                                                        } as! (Error?) -> Void)
+        }, errorBlock: { (error: Error?) in
+            NSLog((error?.localizedDescription)!)
+        })
     }
 
     //MARK: VKSdkDelegate
