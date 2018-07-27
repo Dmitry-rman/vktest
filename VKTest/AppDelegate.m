@@ -5,10 +5,9 @@
 //  Created by Dmitry Kudryavtsev
 
 #import "AppDelegate.h"
-#import "VKSdk.h"
-#import "VKDataProvider.h"
 #import "VKFriendsViewController.h"
 #import "VkStartViewController.h"
+#import "VKTest-Swift.h"
 
 @interface AppDelegate (){
   
@@ -32,17 +31,17 @@
         controller.dataProvider = weakSelf.dataProvider;
         navController.viewControllers = @[controller];
         [self.window makeKeyAndVisible];
-    }
-                                    Fail:^(NSString *failMessage) {
-                                        [weakSelf showMessage: failMessage
-                                                    WithTitle: NSLocalizedString(@"Error on VK authorization. Please, try again.", nil)
-                                                AndCompletion:^{
-                                                      UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
-                                                      VkStartViewController *controller =  (VkStartViewController*)[storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([VkStartViewController class])];
-                                                      controller.dataProvider = weakSelf.dataProvider;
-                                                      navController.viewControllers = @[controller];
-                                                    }];
-                                    }];
+    } fail:^(NSString * _Nonnull failMessage) {
+        [weakSelf showMessage: failMessage
+                    WithTitle: NSLocalizedString(@"Error on VK authorization. Please, try again.", nil)
+                AndCompletion:^{
+                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
+                    VkStartViewController *controller =  (VkStartViewController*)[storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([VkStartViewController class])];
+                    controller.dataProvider = weakSelf.dataProvider;
+                    navController.viewControllers = @[controller];
+                }];
+    }];
+    
     return YES;
 }
 

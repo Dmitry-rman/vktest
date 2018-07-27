@@ -6,8 +6,8 @@
 //
 
 #import "VkStartViewController.h"
-#import "VKDataProvider.h"
 #import "VKFriendsViewController.h"
+#import "VKTest-Swift.h"
 
 static NSString *const kVkFriendsSegue = @"vkFriendsSegue";
 
@@ -30,12 +30,11 @@ static NSString *const kVkFriendsSegue = @"vkFriendsSegue";
     
     __weak typeof(self) weakSelf = self;
     [_dataProvider prepareWithCompletion:^{
-        [weakSelf performSegueWithIdentifier: kVkFriendsSegue sender: weakSelf];
-    }
-                                    Fail:^(NSString *failMessage) {
-                                        [weakSelf showMessage: failMessage
-                                                    WithTitle: NSLocalizedString(@"Error on VK authorization. Please, try again.", nil)];
-                                    }];
+         [weakSelf performSegueWithIdentifier: kVkFriendsSegue sender: weakSelf];
+    } fail:^(NSString * _Nonnull failMessage) {
+        [weakSelf showMessage: failMessage
+                    WithTitle: NSLocalizedString(@"Error on VK authorization. Please, try again.", nil)];
+    }];
 }
 
 #pragma mark Navigation

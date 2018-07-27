@@ -29,10 +29,6 @@
 		0A1D98DE20F8AB6A008FCC86 /* VKTestProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98D620F8AB6A008FCC86 /* VKTestProfileCell.m */; };
 		0A1D98E320F8AB78008FCC86 /* VKTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98E220F8AB78008FCC86 /* VKTestTableViewController.m */; };
 		0A1D98E420F8AB78008FCC86 /* VKTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98E220F8AB78008FCC86 /* VKTestTableViewController.m */; };
-		0A1D98E720FA68DA008FCC86 /* VKDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */; };
-		0A1D98E820FA68DA008FCC86 /* VKDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */; };
-		0A1D98EB20FB0660008FCC86 /* VKFriendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98EA20FB0660008FCC86 /* VKFriendData.m */; };
-		0A1D98EC20FB0660008FCC86 /* VKFriendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98EA20FB0660008FCC86 /* VKFriendData.m */; };
 		0A1D98F020FB22A4008FCC86 /* VkStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98EF20FB22A4008FCC86 /* VkStartViewController.m */; };
 		0A1D98F120FB22A4008FCC86 /* VkStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98EF20FB22A4008FCC86 /* VkStartViewController.m */; };
 		0A1D98F420FB2447008FCC86 /* VKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98F320FB2447008FCC86 /* VKBaseViewController.m */; };
@@ -47,8 +43,6 @@
 		0AC384962108CECD009C1F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC384952108CECD009C1F83 /* Assets.xcassets */; };
 		0AC3849E2108CF68009C1F83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1D98D220F8AB6A008FCC86 /* Main.storyboard */; };
 		0AC3849F2108CF79009C1F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1D98CF20F8AB6A008FCC86 /* LaunchScreen.storyboard */; };
-		0AC384A02108CFC6009C1F83 /* VKDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */; };
-		0AC384A12108CFC6009C1F83 /* VKFriendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D98EA20FB0660008FCC86 /* VKFriendData.m */; };
 		0AC384A42108D13A009C1F83 /* VKDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A32108D13A009C1F83 /* VKDataProvider.swift */; };
 		0AC384A52108D13A009C1F83 /* VKDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A32108D13A009C1F83 /* VKDataProvider.swift */; };
 		0AC384A72108D308009C1F83 /* FriendProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */; };
@@ -105,11 +99,6 @@
 		0A1D98D620F8AB6A008FCC86 /* VKTestProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKTestProfileCell.m; sourceTree = "<group>"; };
 		0A1D98E120F8AB78008FCC86 /* VKTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKTestTableViewController.h; sourceTree = "<group>"; };
 		0A1D98E220F8AB78008FCC86 /* VKTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKTestTableViewController.m; sourceTree = "<group>"; };
-		0A1D98E520FA68DA008FCC86 /* VKDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKDataProvider.h; sourceTree = "<group>"; };
-		0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKDataProvider.m; sourceTree = "<group>"; };
-		0A1D98E920FB065F008FCC86 /* VKFriendData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKFriendData.h; sourceTree = "<group>"; };
-		0A1D98EA20FB0660008FCC86 /* VKFriendData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKFriendData.m; sourceTree = "<group>"; };
-		0A1D98ED20FB0762008FCC86 /* FriendProviderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendProviderProtocol.h; sourceTree = "<group>"; };
 		0A1D98EE20FB22A4008FCC86 /* VkStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VkStartViewController.h; sourceTree = "<group>"; };
 		0A1D98EF20FB22A4008FCC86 /* VkStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VkStartViewController.m; sourceTree = "<group>"; };
 		0A1D98F220FB2447008FCC86 /* VKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKBaseViewController.h; sourceTree = "<group>"; };
@@ -245,14 +234,9 @@
 		0A1D98DF20F8AB70008FCC86 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0A1D98E520FA68DA008FCC86 /* VKDataProvider.h */,
-				0A1D98E620FA68DA008FCC86 /* VKDataProvider.m */,
 				0AC384A32108D13A009C1F83 /* VKDataProvider.swift */,
 				0AC384A62108D308009C1F83 /* FriendProviderProtocol.swift */,
 				0AC384A92108D344009C1F83 /* VKFriendData.swift */,
-				0A1D98ED20FB0762008FCC86 /* FriendProviderProtocol.h */,
-				0A1D98E920FB065F008FCC86 /* VKFriendData.h */,
-				0A1D98EA20FB0660008FCC86 /* VKFriendData.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -569,10 +553,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC384AB2108D344009C1F83 /* VKFriendData.swift in Sources */,
-				0AC384A12108CFC6009C1F83 /* VKFriendData.m in Sources */,
 				0AC384A52108D13A009C1F83 /* VKDataProvider.swift in Sources */,
 				0AC3848F2108CECB009C1F83 /* AppDelegate.swift in Sources */,
-				0AC384A02108CFC6009C1F83 /* VKDataProvider.m in Sources */,
 				0AC384A82108D308009C1F83 /* FriendProviderProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,9 +569,7 @@
 				0A1D98DD20F8AB6A008FCC86 /* VKTestProfileCell.m in Sources */,
 				0A1D98DB20F8AB6A008FCC86 /* VKFriendViewController.m in Sources */,
 				0A1D98B620F8A2B7008FCC86 /* JMSTableViewRow.m in Sources */,
-				0A1D98E720FA68DA008FCC86 /* VKDataProvider.m in Sources */,
 				0A1D98F020FB22A4008FCC86 /* VkStartViewController.m in Sources */,
-				0A1D98EB20FB0660008FCC86 /* VKFriendData.m in Sources */,
 				0AD1C11820F88D2100577883 /* main.m in Sources */,
 				0AC384AA2108D344009C1F83 /* VKFriendData.swift in Sources */,
 				0A1D98C420F8A556008FCC86 /* UILabel+LinesCount.m in Sources */,
@@ -626,11 +606,9 @@
 				0ACB8AFB20FD09C000352970 /* NSDate+Helper.m in Sources */,
 				0A1D98F520FB2447008FCC86 /* VKBaseViewController.m in Sources */,
 				0A1D98F120FB22A4008FCC86 /* VkStartViewController.m in Sources */,
-				0A1D98EC20FB0660008FCC86 /* VKFriendData.m in Sources */,
 				0A1D98F920FB3591008FCC86 /* VKFriendsViewController.m in Sources */,
 				0A1D98B720F8A2B7008FCC86 /* JMSTableViewRow.m in Sources */,
 				0A1D98DC20F8AB6A008FCC86 /* VKFriendViewController.m in Sources */,
-				0A1D98E820FA68DA008FCC86 /* VKDataProvider.m in Sources */,
 				0A1D98B520F8A2B7008FCC86 /* JMSTableViewConfig.m in Sources */,
 				0A1D98B920F8A2B8008FCC86 /* JMSTableViewSection.m in Sources */,
 				0ACB8AF920FD09C000352970 /* UIImage+resize.m in Sources */,
@@ -826,6 +804,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5K42YC37US;
 				INFOPLIST_FILE = VKTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -850,6 +829,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5K42YC37US;
 				INFOPLIST_FILE = VKTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -12,7 +12,7 @@ import VK_ios_sdk
 let VK_APP_ID: NSString = "6631966"
 let vkFriendFields: NSString = "id,first_name,last_name,city,country,photo_100,online,online_mobile,lists,contacts,connections,status,last_seen,common_count,relation,relatives,counters,sex"
 
-class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
+@objc public class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
     
     var _vkPrepareSuccessHandler: (()->Void)?
     var _vkPrepareFailHandler: ((_ failMessage: NSString)->Void)?
@@ -73,9 +73,9 @@ class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
     
     //MARK: FriendProviderProtocol
     
-    func getFriendInfo(id: NSNumber,
+    public func getFriendInfo(id: NSNumber,
                        onSuccess completionBlock : @escaping (VKFriendData?)->(),
-                       onFail failBlock : @escaping (NSError)->() -> Void){
+                       onFail failBlock : @escaping (_ error: NSError)->() -> Void){
         VKApi.users().get([ VK_API_FIELDS : vkFriendFields,
                             VK_API_USER_IDS: id.stringValue]).execute(resultBlock: { (response: VKResponse?) in
                                 let user: VKUser? = (response?.parsedModel as! VKUsersArray?)!.firstObject()
@@ -91,7 +91,7 @@ class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
     }
     
 
-    func prepare(completion: @escaping () -> Void, fail: @escaping (_ failMessage: NSString) -> Void){
+    public func prepare(completion: @escaping () -> Void, fail: @escaping (_ failMessage: NSString) -> Void){
         let scope = [VK_PER_FRIENDS, VK_PER_STATUS]
         weak var weakself = self
         VKSdk.wakeUpSession(scope) { (state: VKAuthorizationState, error: Error?) in
@@ -109,13 +109,13 @@ class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
         }
     }
     
-    var friends: NSArray {
+    public var friends: NSArray {
         get{
             return _friends
         }
     }
     
-    func reloadFriendList() -> Void{
+    public func reloadFriendList() -> Void{
         weak var weakself = self
         VKApi.friends().get([ VK_API_FIELDS : vkFriendFields]).execute(resultBlock: { (response: VKResponse?) in
             weakself?._friends.removeAllObjects()
@@ -134,7 +134,7 @@ class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
     }
 
     //MARK: VKSdkDelegate
-    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+    public func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         if(result.token != nil){
             if(_vkPrepareSuccessHandler != nil){
                 _vkPrepareSuccessHandler!()
@@ -149,7 +149,7 @@ class VKDataProvider: NSObject, FriendProviderProtocol, VKSdkDelegate {
         self.clean()
     }
     
-    func vkSdkUserAuthorizationFailed() {
+    public func vkSdkUserAuthorizationFailed() {
         if(_vkPrepareFailHandler != nil){
             _vkPrepareFailHandler!(NSLocalizedString("VK authorization error.", comment: "") as NSString)
         }

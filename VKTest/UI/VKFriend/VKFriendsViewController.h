@@ -6,7 +6,9 @@
 //
 
 #import "VKTestTableViewController.h"
-#import "FriendProviderProtocol.h"
+#import "VKTest-Swift.h"
+
+@protocol FriendProviderProtocol;
 
 @interface VKFriendsViewController : VKBaseViewController
 

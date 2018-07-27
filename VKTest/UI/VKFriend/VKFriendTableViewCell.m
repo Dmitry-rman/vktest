@@ -5,7 +5,7 @@
 //  Created by Dmitry Kudryavtsev
 
 #import "VKFriendTableViewCell.h"
-#import "VKFriendData.h"
+#import "VKTest-Swift.h"
 
 #import <AFNetworking/UIImageView+AFNetworking.h>
 

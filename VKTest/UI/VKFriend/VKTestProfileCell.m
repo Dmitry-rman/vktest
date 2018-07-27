@@ -6,8 +6,8 @@
 //
 
 #import "VKTestProfileCell.h"
-#import "VKFriendData.h"
 #import "VKStatsCollectionViewCell.h"
+#import "VKTest-Swift.h"
 
 @interface VKTestProfileCell()   <UICollectionViewDelegate, UICollectionViewDataSource>{
     VKFriendData *_friendData;

@@ -9,9 +9,9 @@
 #import "LGRefreshView.h"
 #import "VKFriendViewController.h"
 #import "VKFriendTableViewCell.h"
-#import "VKFriendData.h"
-#import "VKDataProvider.h"
+#import "VKTest-Swift.h"
 
+#define kDataProviderChangedFriendsListNotification @"kDataProviderChangedFriendsListNotification"
 static NSString *const kVkFriendInfoSegue = @"vkFriendInfoSegue";
 static NSString *const kVKFriendCellID = @"vkFriendCellID";
 
@@ -84,15 +84,15 @@ static NSString *const kVKFriendCellID = @"vkFriendCellID";
     __weak typeof(self) weakSelf = self;
     VKFriendData *friendInfo = _dataProvider.friends[indexPath.row];
     [self showBusy];
-    [self.dataProvider getFriendInfoByID: friendInfo.userID
-                      WithCompletion:^(VKFriendData *friendInfo) {
-                          [weakSelf showFriend: friendInfo];
-                          [weakSelf hideBusy];
-                      }
-                                   Error:^(NSError *error) {
+    [self.dataProvider getFriendInfoWithId: @(friendInfo.userID.integerValue)
+                                 onSuccess:^(VKFriendData * _Nullable friendInfo) {
+        [weakSelf showFriend: friendInfo];
+        [weakSelf hideBusy];
+    } onFail: nil];
+   /*
                           [weakSelf showError: error];
                           [weakSelf hideBusy];
-                      }];
+               */
     
 }
 

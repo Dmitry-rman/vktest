@@ -9,8 +9,7 @@
 #import "JMSTableViewConfig.h"
 #import "VKTestProfileCell.h"
 #import "LGRefreshView.h"
-#import "VKDataProvider.h"
-#import "VKFriendData.h"
+#import "VKTest-Swift.h"
 
 static NSString *const kProfilCellID = @"profileCellID";
 
@@ -71,22 +70,24 @@ typedef NS_ENUM(NSInteger, VKFriendSectionIdentifier) {
     
     __weak typeof(self) weakSelf = self;
     
-    [_dataProvider getFriendInfoByID: self.friendInfo.userID
-                      WithCompletion:^(VKFriendData *friendInfo) {
-        
-        weakSelf.friendInfo = friendInfo;
-        weakSelf.navigationItem.title = friendInfo.name;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.refreshView endRefreshing];
-            [weakSelf.tableView reloadData];
-        });
-    } Error:^(NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.refreshView endRefreshing];
-            [weakSelf showError: error];
-        });
-    }];
+    [_dataProvider getFriendInfoWithId: @(self.friendInfo.userID.integerValue)
+                             onSuccess:^(VKFriendData * _Nullable friendInfo) {
+                                 weakSelf.friendInfo = friendInfo;
+                                 weakSelf.navigationItem.title = friendInfo.name;
+                                 
+                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                     [weakSelf.refreshView endRefreshing];
+                                     [weakSelf.tableView reloadData];
+                                 });
+                             } onFail: nil];
+    
+    /*
+     dispatch_async(dispatch_get_main_queue(), ^{
+     [weakSelf.refreshView endRefreshing];
+     [weakSelf showError: error];
+     });
+     */
+
 }
 
 #pragma mark Actions

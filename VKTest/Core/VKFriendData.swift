@@ -15,16 +15,16 @@ enum UserSex: Int {
 }
 
 
-class VKFriendData: NSObject {
+@objc public class VKFriendData: NSObject {
     
-    var userID: String
-    var isOnline: Bool
-    var name: String
-    var vizitText: String
-    var infoText: String
-    var photoImageURL: URL
-    var isYourFriend: Bool
-    var statCounters: NSDictionary
+    public var userID: String
+    public var isOnline: Bool
+    public var name: String
+    public var vizitText: String
+    public var infoText: String
+    public var photoImageURL: URL
+    public var isYourFriend: Bool
+    public var statCounters: NSDictionary
     
     init(name: String,
                      userID: String,
